@@ -53,7 +53,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              <img src="static/images/bear_logo_white_bg.png" alt="ursa Icon" style="vertical-align: -5px; width: 70px; height: 70px;">
+              <img src="static/images/bear_logo_white_bg.png" alt="ursa Icon" style="vertical-align: -8px; width: 70px; height: 70px;">
               URSA: <br>Understanding Chain-of-Thought Reasoning and Verifying in Multimodal Mathematics
             </h1>
             
@@ -174,23 +174,22 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
+          <div class="content has-text-justified" style="background-color: #f5f5f5; padding: 20px;">
             <p>
               Chain-of-thought (CoT) reasoning has been widely applied in the mathematical reasoning of large language models (LLMs). Recently, the derivative process supervision methods have sparked discussions on scaling capabilities during test time. However, in multimodal mathematics reasoning, the scarcity of high-quality CoT training data has hindered existing models from achieving high-precision CoT reasoning and limiting the realization of reasoning potential during test time. In this work, we propose a three-module synthesis strategy that integrates CoT distillation, trajectory-format rewriting, and format unification. Also, we contribute a high-quality CoT reasoning instruction fine-tuning dataset in multimodal mathematics, MMathCoT-1M. We comprehensively validate the state-of-the-art (SOTA) performance of the trained URSA-7B on multiple multimodal mathematics reasoning benchmarks. For test-time scaling, we introduce a data synthesis strategy that automatically generates process annotation datasets focusing on both interpretation and logic. By further training on URSA-7B, we aim to inherit CoT reasoning capabilities and achieve robust supervision abilities. The trained URSA-RM-7B acts as a verifier, effectively enhancing the performance of URSA-7B at test time in multimodal mathematics reasoning, and achieves superior results. Model weights and training data will be totally open-sourced.
             </p>
+          </div>
+          <div class="item" style="background-color: #ffffff; padding: 20px; margin-top: 20px;">
+            <img src="static/images/radar_chart.png" alt="ursa comparison" style="width: 100%; height: auto;" />
+            <h2 class="subtitle" style="font-size: 16px; color: #888888; font-weight: normal;">
+              Figure 1: Comparison of reasoning abilities across different disciplines and under varying modalities of information. We use MathVista and MathVerse as benchmarks.
+            </h2>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="item" style="text-align: center; margin-top: 20px;">
-  <img src="static/images/radar_chart.png" alt="ursa comparison" style="width: 100%; height: auto;" />
-  <h2 class="subtitle" style="font-size: 16px; color: #888888; font-weight: normal;">
-    Figure 1: Comparison of reasoning abilities across different disciplines and under varying modalities of information. We use MathVista and MathVerse as benchmarks.
-  </h2>
-</div>
 
 <!-- End paper abstract -->
 
