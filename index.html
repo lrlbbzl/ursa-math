@@ -191,12 +191,17 @@
   </div>
 </section>
 
+
+
 <!-- End paper abstract -->
 <section class="hero">
   <div class="hero-body">
       <div class="container is-max-desktop is-centered">
           <div class="container">
               <h2 class="title is-3 has-text-centered">Overview</h2>
+              <p>
+                In this work, we first perform vision-language alignment based on the collected 1M data. Subsequently, we train the multimodal mathematics reasoning model URSA-7B and the reward model URSA-RM-7B using the synthesized MMathCoT-1M and DualMath-1.1M datasets, respectively.
+              </p>
               <div class="item" style="background-color: #ffffff; padding: 20px; margin-top: 20px; text-align: center;">
                 <img src="static/images/overflow.png" alt="ursa overflow" style="width: 100%; height: auto;" />
                 <h2 class="subtitle" style="font-size: 16px; color: #888888; font-weight: normal;">
@@ -204,10 +209,34 @@
                 </h2>
               </div>
           </div>
-          <p>
-            In this work, we first perform vision-language alignment based on the collected 1M data. Subsequently, we train the multimodal mathematics reasoning model URSA-7B and the reward model URSA-RM-7B using the synthesized MMathCoT-1M and DualMath-1.1M datasets, respectively.
-          </p>
       </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">Data Synthesis</h2>
+          <div class="content has-text-justified" style="background-color: #f5f5f5; padding: 20px;">
+            <p>
+              <b>VL-alignment Data:</b> This portion of the data comes from collections, including MAVIS_Caption, Multimath-EN, and Geo170k-Alignment, totaling 960K.
+              <br>
+              <b>Math SFT Data:</b>We collect and categorize existing open-source data and apply different enhancement strategies: (1) Answer-only: This portion of the data is distilled by Gemini-1.5-Flash-002 to form CoT reasoning trajectories; (2) Analysis-formatted: This portion of the data is rewritten by Gemini-1.5-Flash-002 to enhance the diversity of CoT logical organization and language; (3) CoT-formatted: This portion of the data is standardized, for example, by rewriting structured mathematical language into a natural language format that combines thought processes with mathematical formulas, thereby leveraging NLU capabilities to better learn CoT reasoning. Finally, we obtain <b>MMathCoT-1M</b>.
+              <br>
+              <b>PRM Training Data:</b>The training data for PRM comes from process-labeled data from two perspectives: one from a binary error localization engine and the other from a misreading insertion engine. This allows PRM training in multimodal scenarios to focus simultaneously on logical correctness and clear image understanding. Following this approach, we organize <b>DualMath-1.1M</b>.
+            </p>
+          </div>
+          <div class="item" style="background-color: #ffffff; padding: 20px; margin-top: 20px;">
+            <img src="static/images/data_pie_crop.pdf" alt="ursa comparison" style="width: 100%; height: auto;" />
+            <h2 class="subtitle" style="font-size: 16px; color: #888888; font-weight: normal;">
+              Figure 3: Data sources used by the URSA-7B model during the VL-alignment and SFT phases.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
