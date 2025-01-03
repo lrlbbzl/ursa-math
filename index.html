@@ -1036,9 +1036,15 @@
         <h2 class="title is-3">Test-time Scaling</h2>
         <div class="content has-text-justified" style="background-color: transparent; padding: 20px;">
           <p>
-            We show the Pass@N performance of URSA-7B below. With only 4 time sampling, URSA-7B can achieve a pass rate of 90.9 on the GPS task of Mathvista. The Pass@64 performance on MathVista is 97.1, indicating that URSA-7B already has substantial coverage of geometric problem-solving strategies. On the MathVerse dataset, URSA-7B also demonstrates a high upper limit of reasoning capability.
+            <b>High Diversity: </b>We show the Pass@N performance of URSA-7B below. With only 4 time sampling, URSA-7B can achieve a pass rate of 90.9 on the GPS task of Mathvista. The Pass@64 performance on MathVista is 97.1, indicating that URSA-7B already has substantial coverage of geometric problem-solving strategies. On the MathVerse dataset, URSA-7B also demonstrates a high upper limit of reasoning capability.
             <br>
             We also compare the Pass@N of Multimath-7B and find that URSA-7B has a significantly higher upper limit in reasoning performance than Multimath-7B. On MathVerse, the Pass@64 of URSA-7B shows a relative improvement of 74.2% compared to single inference, while Multimath-7B only shows an improvement of 58.5%.
+          </p>
+          <p>
+            <b>Great verifier: </b>The accuracy significantly surpasses self-consistency, making it a better test-time scaling reward model tool for multimodal mathematics reasoning.
+          </p>
+          <p>
+            <b>Extensible OOD Capability:</b> We choose Multimath as the base model, as it is relatively stable in performing CoT solutions after mathematics instruction tuning. We find that URSA-RM-7B effectively serves as a verifier for Multimath's CoT solutions, surpassing the performance of self-consistency.
           </p>
         </div>
         <!-- <p>One example for each reasoning skill required in <span class="mathvista">MathVista</span></p> -->
